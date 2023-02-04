@@ -16,6 +16,10 @@
         "source": "/home/luke/.gradle/daemon/7.4.2/com.example.lunchtray.app-main-49:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
+        "merged": "com.example.lunchtray.app-merged_res-47:/layout_fragment_accompaniment_menu.xml.flat",
+        "source": "com.example.lunchtray.app-main-49:/layout/fragment_accompaniment_menu.xml"
+    },
+    {
         "merged": "/home/luke/.gradle/daemon/7.4.2/com.example.lunchtray.app-merged_res-47:/layout_activity_main.xml.flat",
         "source": "/home/luke/.gradle/daemon/7.4.2/com.example.lunchtray.app-main-49:/layout/activity_main.xml"
     },
@@ -46,9 +50,5 @@
     {
         "merged": "/home/luke/.gradle/daemon/7.4.2/com.example.lunchtray.app-merged_res-47:/drawable_ic_launcher_foreground.xml.flat",
         "source": "/home/luke/.gradle/daemon/7.4.2/com.example.lunchtray.app-main-49:/drawable/ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "com.example.lunchtray.app-merged_res-47:/layout_fragment_checkout.xml.flat",
-        "source": "com.example.lunchtray.app-main-49:/layout/fragment_checkout.xml"
     }
 ]

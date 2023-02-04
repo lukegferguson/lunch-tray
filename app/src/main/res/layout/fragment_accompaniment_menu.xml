@@ -57,6 +57,7 @@
                     android:textAppearance="?attr/textAppearanceBody1"
                     android:text='@{viewModel.menuItems["bread"].name}'
                     android:onClick='@{() -> viewModel.setAccompaniment("bread")}'
+                    android:checked='@{viewModel.accompaniment.equals(viewModel.menuItems["bread"])}'
                     tools:text="Accompaniment 1" />
 
                 <TextView
@@ -85,6 +86,7 @@
                     android:textAppearance="?attr/textAppearanceBody1"
                     android:text='@{viewModel.menuItems["berries"].name}'
                     android:onClick='@{() -> viewModel.setAccompaniment("berries")}'
+                    android:checked='@{viewModel.accompaniment.equals(viewModel.menuItems["berries"])}'
                     tools:text="Accompaniment 2" />
 
                 <TextView
@@ -115,6 +117,7 @@
                     android:textAppearance="?attr/textAppearanceBody1"
                     android:text='@{viewModel.menuItems["pickles"].name}'
                     android:onClick='@{() -> viewModel.setAccompaniment("pickles")}'
+                    android:checked='@{viewModel.accompaniment.equals(viewModel.menuItems["pickles"])}'
                     tools:text="Accompaniment 3" />
 
                 <TextView
@@ -149,7 +152,7 @@
                 app:layout_constraintTop_toBottomOf="@id/divider"
                 android:text="@{@string/subtotal(viewModel.subtotal)}"
                 tools:text="Subtotal $5.00"/>
-            
+
             <Button
                 android:id="@+id/cancel_button"
                 style="@style/Widget.Order.Button.Cancel"

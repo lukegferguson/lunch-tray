@@ -41,7 +41,7 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
         this(bindingComponent, root, mapBindings(bindingComponent, root, 18, sIncludes, sViewsWithIds));
     }
     private FragmentSideMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 1
+        super(bindingComponent, root, 2
             , (android.widget.Button) bindings[14]
             , (android.view.View) bindings[17]
             , (android.widget.Button) bindings[15]
@@ -91,7 +91,7 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x8L;
+                mDirtyFlags = 0x10L;
         }
         requestRebind();
     }
@@ -124,7 +124,7 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     public void setSideFragment(@Nullable com.example.lunchtray.ui.order.SideMenuFragment SideFragment) {
         this.mSideFragment = SideFragment;
         synchronized(this) {
-            mDirtyFlags |= 0x2L;
+            mDirtyFlags |= 0x4L;
         }
         notifyPropertyChanged(BR.sideFragment);
         super.requestRebind();
@@ -132,7 +132,7 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     public void setViewModel(@Nullable com.example.lunchtray.model.OrderViewModel ViewModel) {
         this.mViewModel = ViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x4L;
+            mDirtyFlags |= 0x8L;
         }
         notifyPropertyChanged(BR.viewModel);
         super.requestRebind();
@@ -143,6 +143,8 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
         switch (localFieldId) {
             case 0 :
                 return onChangeViewModelSubtotal((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+            case 1 :
+                return onChangeViewModelSide((androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem>) object, fieldId);
         }
         return false;
     }
@@ -150,6 +152,15 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeViewModelSide(androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> ViewModelSide, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -169,11 +180,16 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
         com.example.lunchtray.model.MenuItem viewModelMenuItemsSoup = null;
         java.lang.String viewModelMenuItemsSoupGetFormattedPrice = null;
         java.lang.String viewModelMenuItemsPotatoesDescription = null;
+        com.example.lunchtray.model.MenuItem viewModelSideGetValue = null;
+        boolean viewModelSideEqualsViewModelMenuItemsSalad = false;
         java.lang.String viewModelMenuItemsSoupDescription = null;
+        androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> viewModelSide = null;
         java.lang.String viewModelMenuItemsPotatoesName = null;
         com.example.lunchtray.model.MenuItem viewModelMenuItemsPotatoes = null;
+        boolean viewModelSideEqualsViewModelMenuItemsSoup = false;
         com.example.lunchtray.model.MenuItem viewModelMenuItemsSalad = null;
         com.example.lunchtray.ui.order.SideMenuFragment sideFragment = mSideFragment;
+        boolean viewModelSideEqualsViewModelMenuItemsPotatoes = false;
         java.lang.String subtotalAndroidStringSubtotalViewModelSubtotal = null;
         java.lang.String viewModelMenuItemsRiceDescription = null;
         java.lang.String viewModelMenuItemsRiceName = null;
@@ -185,32 +201,38 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
         java.lang.String viewModelMenuItemsSaladGetFormattedPrice = null;
         com.example.lunchtray.model.OrderViewModel viewModel = mViewModel;
         java.lang.String viewModelMenuItemsRiceGetFormattedPrice = null;
+        boolean viewModelSideEqualsViewModelMenuItemsRice = false;
 
-        if ((dirtyFlags & 0xdL) != 0) {
-
-
-
-                if (viewModel != null) {
-                    // read viewModel.subtotal
-                    viewModelSubtotal = viewModel.getSubtotal();
-                }
-                updateLiveDataRegistration(0, viewModelSubtotal);
+        if ((dirtyFlags & 0x1bL) != 0) {
 
 
-                if (viewModelSubtotal != null) {
-                    // read viewModel.subtotal.getValue()
-                    viewModelSubtotalGetValue = viewModelSubtotal.getValue();
-                }
+            if ((dirtyFlags & 0x19L) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.subtotal
+                        viewModelSubtotal = viewModel.getSubtotal();
+                    }
+                    updateLiveDataRegistration(0, viewModelSubtotal);
 
 
-                // read @android:string/subtotal
-                subtotalAndroidStringSubtotalViewModelSubtotal = subtotal.getResources().getString(R.string.subtotal, viewModelSubtotalGetValue);
-            if ((dirtyFlags & 0xcL) != 0) {
+                    if (viewModelSubtotal != null) {
+                        // read viewModel.subtotal.getValue()
+                        viewModelSubtotalGetValue = viewModelSubtotal.getValue();
+                    }
+
+
+                    // read @android:string/subtotal
+                    subtotalAndroidStringSubtotalViewModelSubtotal = subtotal.getResources().getString(R.string.subtotal, viewModelSubtotalGetValue);
+            }
+            if ((dirtyFlags & 0x1aL) != 0) {
 
                     if (viewModel != null) {
                         // read viewModel.menuItems
                         viewModelMenuItems = viewModel.getMenuItems();
+                        // read viewModel.side
+                        viewModelSide = viewModel.getSide();
                     }
+                    updateLiveDataRegistration(1, viewModelSide);
 
 
                     if (viewModelMenuItems != null) {
@@ -223,44 +245,61 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
                         // read viewModel.menuItems["rice"]
                         viewModelMenuItemsRice = viewModelMenuItems.get("rice");
                     }
+                    if (viewModelSide != null) {
+                        // read viewModel.side.getValue()
+                        viewModelSideGetValue = viewModelSide.getValue();
+                    }
 
+                if ((dirtyFlags & 0x18L) != 0) {
 
-                    if (viewModelMenuItemsSoup != null) {
-                        // read viewModel.menuItems["soup"].name
-                        viewModelMenuItemsSoupName = viewModelMenuItemsSoup.getName();
-                        // read viewModel.menuItems["soup"].getFormattedPrice()
-                        viewModelMenuItemsSoupGetFormattedPrice = viewModelMenuItemsSoup.getFormattedPrice();
-                        // read viewModel.menuItems["soup"].description
-                        viewModelMenuItemsSoupDescription = viewModelMenuItemsSoup.getDescription();
-                    }
-                    if (viewModelMenuItemsPotatoes != null) {
-                        // read viewModel.menuItems["potatoes"].description
-                        viewModelMenuItemsPotatoesDescription = viewModelMenuItemsPotatoes.getDescription();
-                        // read viewModel.menuItems["potatoes"].name
-                        viewModelMenuItemsPotatoesName = viewModelMenuItemsPotatoes.getName();
-                        // read viewModel.menuItems["potatoes"].getFormattedPrice()
-                        viewModelMenuItemsPotatoesGetFormattedPrice = viewModelMenuItemsPotatoes.getFormattedPrice();
-                    }
-                    if (viewModelMenuItemsSalad != null) {
-                        // read viewModel.menuItems["salad"].description
-                        viewModelMenuItemsSaladDescription = viewModelMenuItemsSalad.getDescription();
-                        // read viewModel.menuItems["salad"].name
-                        viewModelMenuItemsSaladName = viewModelMenuItemsSalad.getName();
-                        // read viewModel.menuItems["salad"].getFormattedPrice()
-                        viewModelMenuItemsSaladGetFormattedPrice = viewModelMenuItemsSalad.getFormattedPrice();
-                    }
-                    if (viewModelMenuItemsRice != null) {
-                        // read viewModel.menuItems["rice"].description
-                        viewModelMenuItemsRiceDescription = viewModelMenuItemsRice.getDescription();
-                        // read viewModel.menuItems["rice"].name
-                        viewModelMenuItemsRiceName = viewModelMenuItemsRice.getName();
-                        // read viewModel.menuItems["rice"].getFormattedPrice()
-                        viewModelMenuItemsRiceGetFormattedPrice = viewModelMenuItemsRice.getFormattedPrice();
+                        if (viewModelMenuItemsSoup != null) {
+                            // read viewModel.menuItems["soup"].name
+                            viewModelMenuItemsSoupName = viewModelMenuItemsSoup.getName();
+                            // read viewModel.menuItems["soup"].getFormattedPrice()
+                            viewModelMenuItemsSoupGetFormattedPrice = viewModelMenuItemsSoup.getFormattedPrice();
+                            // read viewModel.menuItems["soup"].description
+                            viewModelMenuItemsSoupDescription = viewModelMenuItemsSoup.getDescription();
+                        }
+                        if (viewModelMenuItemsPotatoes != null) {
+                            // read viewModel.menuItems["potatoes"].description
+                            viewModelMenuItemsPotatoesDescription = viewModelMenuItemsPotatoes.getDescription();
+                            // read viewModel.menuItems["potatoes"].name
+                            viewModelMenuItemsPotatoesName = viewModelMenuItemsPotatoes.getName();
+                            // read viewModel.menuItems["potatoes"].getFormattedPrice()
+                            viewModelMenuItemsPotatoesGetFormattedPrice = viewModelMenuItemsPotatoes.getFormattedPrice();
+                        }
+                        if (viewModelMenuItemsSalad != null) {
+                            // read viewModel.menuItems["salad"].description
+                            viewModelMenuItemsSaladDescription = viewModelMenuItemsSalad.getDescription();
+                            // read viewModel.menuItems["salad"].name
+                            viewModelMenuItemsSaladName = viewModelMenuItemsSalad.getName();
+                            // read viewModel.menuItems["salad"].getFormattedPrice()
+                            viewModelMenuItemsSaladGetFormattedPrice = viewModelMenuItemsSalad.getFormattedPrice();
+                        }
+                        if (viewModelMenuItemsRice != null) {
+                            // read viewModel.menuItems["rice"].description
+                            viewModelMenuItemsRiceDescription = viewModelMenuItemsRice.getDescription();
+                            // read viewModel.menuItems["rice"].name
+                            viewModelMenuItemsRiceName = viewModelMenuItemsRice.getName();
+                            // read viewModel.menuItems["rice"].getFormattedPrice()
+                            viewModelMenuItemsRiceGetFormattedPrice = viewModelMenuItemsRice.getFormattedPrice();
+                        }
+                }
+
+                    if (viewModelSideGetValue != null) {
+                        // read viewModel.side.getValue().equals(viewModel.menuItems["salad"])
+                        viewModelSideEqualsViewModelMenuItemsSalad = viewModelSideGetValue.equals(viewModelMenuItemsSalad);
+                        // read viewModel.side.getValue().equals(viewModel.menuItems["soup"])
+                        viewModelSideEqualsViewModelMenuItemsSoup = viewModelSideGetValue.equals(viewModelMenuItemsSoup);
+                        // read viewModel.side.getValue().equals(viewModel.menuItems["potatoes"])
+                        viewModelSideEqualsViewModelMenuItemsPotatoes = viewModelSideGetValue.equals(viewModelMenuItemsPotatoes);
+                        // read viewModel.side.getValue().equals(viewModel.menuItems["rice"])
+                        viewModelSideEqualsViewModelMenuItemsRice = viewModelSideGetValue.equals(viewModelMenuItemsRice);
                     }
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x8L) != 0) {
+        if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
             this.cancelButton.setOnClickListener(mCallback12);
@@ -270,7 +309,7 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
             this.salad.setOnClickListener(mCallback8);
             this.soup.setOnClickListener(mCallback9);
         }
-        if ((dirtyFlags & 0xcL) != 0) {
+        if ((dirtyFlags & 0x18L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.potatoDescription, viewModelMenuItemsPotatoesDescription);
@@ -286,7 +325,15 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.soupDescription, viewModelMenuItemsSoupDescription);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.soupPrice, viewModelMenuItemsSoupGetFormattedPrice);
         }
-        if ((dirtyFlags & 0xdL) != 0) {
+        if ((dirtyFlags & 0x1aL) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.potatoes, viewModelSideEqualsViewModelMenuItemsPotatoes);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.rice, viewModelSideEqualsViewModelMenuItemsRice);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.salad, viewModelSideEqualsViewModelMenuItemsSalad);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.soup, viewModelSideEqualsViewModelMenuItemsSoup);
+        }
+        if ((dirtyFlags & 0x19L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtotal, subtotalAndroidStringSubtotalViewModelSubtotal);
@@ -408,9 +455,10 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewModel.subtotal
-        flag 1 (0x2L): sideFragment
-        flag 2 (0x3L): viewModel
-        flag 3 (0x4L): null
+        flag 1 (0x2L): viewModel.side
+        flag 2 (0x3L): sideFragment
+        flag 3 (0x4L): viewModel
+        flag 4 (0x5L): null
     flag mapping end*/
     //end
 }

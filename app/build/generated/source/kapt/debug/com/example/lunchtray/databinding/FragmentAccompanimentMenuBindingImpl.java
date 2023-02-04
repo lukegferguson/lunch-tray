@@ -39,7 +39,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
         this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
     }
     private FragmentAccompanimentMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 1
+        super(bindingComponent, root, 2
             , (android.widget.RadioGroup) bindings[13]
             , (android.widget.RadioButton) bindings[4]
             , (android.widget.TextView) bindings[5]
@@ -82,7 +82,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x8L;
+                mDirtyFlags = 0x10L;
         }
         requestRebind();
     }
@@ -115,7 +115,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     public void setAccompanimentFragment(@Nullable com.example.lunchtray.ui.order.AccompanimentMenuFragment AccompanimentFragment) {
         this.mAccompanimentFragment = AccompanimentFragment;
         synchronized(this) {
-            mDirtyFlags |= 0x2L;
+            mDirtyFlags |= 0x4L;
         }
         notifyPropertyChanged(BR.accompanimentFragment);
         super.requestRebind();
@@ -123,7 +123,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     public void setViewModel(@Nullable com.example.lunchtray.model.OrderViewModel ViewModel) {
         this.mViewModel = ViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x4L;
+            mDirtyFlags |= 0x8L;
         }
         notifyPropertyChanged(BR.viewModel);
         super.requestRebind();
@@ -133,14 +133,25 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
+                return onChangeViewModelAccompaniment((androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem>) object, fieldId);
+            case 1 :
                 return onChangeViewModelSubtotal((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+        }
+        return false;
+    }
+    private boolean onChangeViewModelAccompaniment(androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> ViewModelAccompaniment, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x1L;
+            }
+            return true;
         }
         return false;
     }
     private boolean onChangeViewModelSubtotal(androidx.lifecycle.LiveData<java.lang.String> ViewModelSubtotal, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
-                    mDirtyFlags |= 0x1L;
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -155,14 +166,18 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
             mDirtyFlags = 0;
         }
         com.example.lunchtray.model.MenuItem viewModelMenuItemsBread = null;
+        androidx.lifecycle.LiveData<com.example.lunchtray.model.MenuItem> viewModelAccompaniment = null;
         androidx.lifecycle.LiveData<java.lang.String> viewModelSubtotal = null;
+        boolean viewModelAccompanimentEqualsViewModelMenuItemsBread = false;
         java.lang.String viewModelMenuItemsBerriesDescription = null;
         com.example.lunchtray.ui.order.AccompanimentMenuFragment accompanimentFragment = mAccompanimentFragment;
         java.lang.String viewModelMenuItemsPicklesGetFormattedPrice = null;
+        boolean viewModelAccompanimentEqualsViewModelMenuItemsPickles = false;
         java.lang.String subtotalAndroidStringSubtotalViewModelSubtotal = null;
         java.util.Map<java.lang.String,com.example.lunchtray.model.MenuItem> viewModelMenuItems = null;
         java.lang.String viewModelSubtotalGetValue = null;
         java.lang.String viewModelMenuItemsBreadName = null;
+        com.example.lunchtray.model.MenuItem viewModelAccompanimentGetValue = null;
         java.lang.String viewModelMenuItemsBreadDescription = null;
         java.lang.String viewModelMenuItemsBerriesGetFormattedPrice = null;
         java.lang.String viewModelMenuItemsBreadGetFormattedPrice = null;
@@ -171,35 +186,27 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
         java.lang.String viewModelMenuItemsBerriesName = null;
         com.example.lunchtray.model.OrderViewModel viewModel = mViewModel;
         java.lang.String viewModelMenuItemsPicklesName = null;
+        boolean viewModelAccompanimentEqualsViewModelMenuItemsBerries = false;
         java.lang.String viewModelMenuItemsPicklesDescription = null;
 
-        if ((dirtyFlags & 0xdL) != 0) {
+        if ((dirtyFlags & 0x1bL) != 0) {
 
 
-
-                if (viewModel != null) {
-                    // read viewModel.subtotal
-                    viewModelSubtotal = viewModel.getSubtotal();
-                }
-                updateLiveDataRegistration(0, viewModelSubtotal);
-
-
-                if (viewModelSubtotal != null) {
-                    // read viewModel.subtotal.getValue()
-                    viewModelSubtotalGetValue = viewModelSubtotal.getValue();
-                }
-
-
-                // read @android:string/subtotal
-                subtotalAndroidStringSubtotalViewModelSubtotal = subtotal.getResources().getString(R.string.subtotal, viewModelSubtotalGetValue);
-            if ((dirtyFlags & 0xcL) != 0) {
+            if ((dirtyFlags & 0x19L) != 0) {
 
                     if (viewModel != null) {
+                        // read viewModel.accompaniment
+                        viewModelAccompaniment = viewModel.getAccompaniment();
                         // read viewModel.menuItems
                         viewModelMenuItems = viewModel.getMenuItems();
                     }
+                    updateLiveDataRegistration(0, viewModelAccompaniment);
 
 
+                    if (viewModelAccompaniment != null) {
+                        // read viewModel.accompaniment.getValue()
+                        viewModelAccompanimentGetValue = viewModelAccompaniment.getValue();
+                    }
                     if (viewModelMenuItems != null) {
                         // read viewModel.menuItems["bread"]
                         viewModelMenuItemsBread = viewModelMenuItems.get("bread");
@@ -210,34 +217,63 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
                     }
 
 
-                    if (viewModelMenuItemsBread != null) {
-                        // read viewModel.menuItems["bread"].name
-                        viewModelMenuItemsBreadName = viewModelMenuItemsBread.getName();
-                        // read viewModel.menuItems["bread"].description
-                        viewModelMenuItemsBreadDescription = viewModelMenuItemsBread.getDescription();
-                        // read viewModel.menuItems["bread"].getFormattedPrice()
-                        viewModelMenuItemsBreadGetFormattedPrice = viewModelMenuItemsBread.getFormattedPrice();
+                    if (viewModelAccompanimentGetValue != null) {
+                        // read viewModel.accompaniment.getValue().equals(viewModel.menuItems["bread"])
+                        viewModelAccompanimentEqualsViewModelMenuItemsBread = viewModelAccompanimentGetValue.equals(viewModelMenuItemsBread);
+                        // read viewModel.accompaniment.getValue().equals(viewModel.menuItems["pickles"])
+                        viewModelAccompanimentEqualsViewModelMenuItemsPickles = viewModelAccompanimentGetValue.equals(viewModelMenuItemsPickles);
+                        // read viewModel.accompaniment.getValue().equals(viewModel.menuItems["berries"])
+                        viewModelAccompanimentEqualsViewModelMenuItemsBerries = viewModelAccompanimentGetValue.equals(viewModelMenuItemsBerries);
                     }
-                    if (viewModelMenuItemsPickles != null) {
-                        // read viewModel.menuItems["pickles"].getFormattedPrice()
-                        viewModelMenuItemsPicklesGetFormattedPrice = viewModelMenuItemsPickles.getFormattedPrice();
-                        // read viewModel.menuItems["pickles"].name
-                        viewModelMenuItemsPicklesName = viewModelMenuItemsPickles.getName();
-                        // read viewModel.menuItems["pickles"].description
-                        viewModelMenuItemsPicklesDescription = viewModelMenuItemsPickles.getDescription();
+                if ((dirtyFlags & 0x18L) != 0) {
+
+                        if (viewModelMenuItemsBread != null) {
+                            // read viewModel.menuItems["bread"].name
+                            viewModelMenuItemsBreadName = viewModelMenuItemsBread.getName();
+                            // read viewModel.menuItems["bread"].description
+                            viewModelMenuItemsBreadDescription = viewModelMenuItemsBread.getDescription();
+                            // read viewModel.menuItems["bread"].getFormattedPrice()
+                            viewModelMenuItemsBreadGetFormattedPrice = viewModelMenuItemsBread.getFormattedPrice();
+                        }
+                        if (viewModelMenuItemsPickles != null) {
+                            // read viewModel.menuItems["pickles"].getFormattedPrice()
+                            viewModelMenuItemsPicklesGetFormattedPrice = viewModelMenuItemsPickles.getFormattedPrice();
+                            // read viewModel.menuItems["pickles"].name
+                            viewModelMenuItemsPicklesName = viewModelMenuItemsPickles.getName();
+                            // read viewModel.menuItems["pickles"].description
+                            viewModelMenuItemsPicklesDescription = viewModelMenuItemsPickles.getDescription();
+                        }
+                        if (viewModelMenuItemsBerries != null) {
+                            // read viewModel.menuItems["berries"].description
+                            viewModelMenuItemsBerriesDescription = viewModelMenuItemsBerries.getDescription();
+                            // read viewModel.menuItems["berries"].getFormattedPrice()
+                            viewModelMenuItemsBerriesGetFormattedPrice = viewModelMenuItemsBerries.getFormattedPrice();
+                            // read viewModel.menuItems["berries"].name
+                            viewModelMenuItemsBerriesName = viewModelMenuItemsBerries.getName();
+                        }
+                }
+            }
+            if ((dirtyFlags & 0x1aL) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.subtotal
+                        viewModelSubtotal = viewModel.getSubtotal();
                     }
-                    if (viewModelMenuItemsBerries != null) {
-                        // read viewModel.menuItems["berries"].description
-                        viewModelMenuItemsBerriesDescription = viewModelMenuItemsBerries.getDescription();
-                        // read viewModel.menuItems["berries"].getFormattedPrice()
-                        viewModelMenuItemsBerriesGetFormattedPrice = viewModelMenuItemsBerries.getFormattedPrice();
-                        // read viewModel.menuItems["berries"].name
-                        viewModelMenuItemsBerriesName = viewModelMenuItemsBerries.getName();
+                    updateLiveDataRegistration(1, viewModelSubtotal);
+
+
+                    if (viewModelSubtotal != null) {
+                        // read viewModel.subtotal.getValue()
+                        viewModelSubtotalGetValue = viewModelSubtotal.getValue();
                     }
+
+
+                    // read @android:string/subtotal
+                    subtotalAndroidStringSubtotalViewModelSubtotal = subtotal.getResources().getString(R.string.subtotal, viewModelSubtotalGetValue);
             }
         }
         // batch finished
-        if ((dirtyFlags & 0xcL) != 0) {
+        if ((dirtyFlags & 0x18L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.berries, viewModelMenuItemsBerriesName);
@@ -250,7 +286,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.picklesDescription, viewModelMenuItemsPicklesDescription);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.picklesPrice, viewModelMenuItemsPicklesGetFormattedPrice);
         }
-        if ((dirtyFlags & 0x8L) != 0) {
+        if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
             this.berries.setOnClickListener(mCallback2);
@@ -259,7 +295,14 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
             this.nextButton.setOnClickListener(mCallback5);
             this.pickles.setOnClickListener(mCallback3);
         }
-        if ((dirtyFlags & 0xdL) != 0) {
+        if ((dirtyFlags & 0x19L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.berries, viewModelAccompanimentEqualsViewModelMenuItemsBerries);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.bread, viewModelAccompanimentEqualsViewModelMenuItemsBread);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.pickles, viewModelAccompanimentEqualsViewModelMenuItemsPickles);
+        }
+        if ((dirtyFlags & 0x1aL) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.subtotal, subtotalAndroidStringSubtotalViewModelSubtotal);
@@ -362,10 +405,11 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewModel.subtotal
-        flag 1 (0x2L): accompanimentFragment
-        flag 2 (0x3L): viewModel
-        flag 3 (0x4L): null
+        flag 0 (0x1L): viewModel.accompaniment
+        flag 1 (0x2L): viewModel.subtotal
+        flag 2 (0x3L): accompanimentFragment
+        flag 3 (0x4L): viewModel
+        flag 4 (0x5L): null
     flag mapping end*/
     //end
 }
