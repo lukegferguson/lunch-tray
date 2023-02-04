@@ -1,0 +1,103 @@
+02-03 18:24:01.416 12838 12861 I TestRunner: started: subtotal_tax_total_in_checkout(com.example.lunchtray.OrderFunctionalityTests)
+02-03 18:24:01.416   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ab390
+02-03 18:24:01.416   442   483 W TransactionTracing: Could not find layer handle 0x75dd172afd70
+02-03 18:24:01.416   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ae1b0
+02-03 18:24:01.416   442   483 W TransactionTracing: Could not find layer handle 0x75dd172a6590
+02-03 18:24:01.416   442   483 W TransactionTracing: Could not find layer handle 0x75dd172a85d0
+02-03 18:24:01.416   442   483 W TransactionTracing: Could not find layer handle 0x75dd172a6590
+02-03 18:24:01.416   442   483 W TransactionTracing: Could not find layer handle 0x75dd172afd70
+02-03 18:24:01.416   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ab390
+02-03 18:24:01.416   442   483 W TransactionTracing: Could not find layer handle 0x75dd172a6590
+02-03 18:24:01.416   442   483 W TransactionTracing: Could not find layer id -1
+02-03 18:24:01.417   442   483 W TransactionTracing: Could not find layer id -1
+02-03 18:24:01.417   442   483 W TransactionTracing: Could not find layer id -1
+02-03 18:24:01.417   442   483 W TransactionTracing: Could not find layer id -1
+02-03 18:24:01.429 12838 12861 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+02-03 18:24:01.436   811   937 D SplashScreenView: Build android.window.SplashScreenView{9f01fa2 V.E...... ......ID 0,0-0,0}
+02-03 18:24:01.436   811   937 D SplashScreenView: Icon: view: null drawable: null size: 0
+02-03 18:24:01.436   811   937 D SplashScreenView: Branding: view: android.view.View{e2d0433 G.ED..... ......I. 0,0-0,0 #10204db android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+02-03 18:24:01.442 12838 12838 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@69546d9 in: PRE_ON_CREATE
+02-03 18:24:01.442 12838 12838 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lunchtray/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lunchtray/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@69546d9
+02-03 18:24:01.446 12838 12838 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@69546d9 in: CREATED
+02-03 18:24:01.447 12838 12838 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lunchtray/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lunchtray/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@69546d9
+02-03 18:24:01.447 12838 12838 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@69546d9 in: STARTED
+02-03 18:24:01.447 12838 12838 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lunchtray/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lunchtray/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@69546d9
+02-03 18:24:01.452 12838 12838 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@69546d9 in: RESUMED
+02-03 18:24:01.453 12838 12838 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lunchtray/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lunchtray/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@69546d9
+02-03 18:24:01.454 12838 12838 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@69546d9 in: PAUSED
+02-03 18:24:01.455 12838 12838 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lunchtray/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lunchtray/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@69546d9
+02-03 18:24:01.486 12838 12838 D LifecycleMonitor: Lifecycle status change: com.example.lunchtray.MainActivity@5292c13 in: PRE_ON_CREATE
+02-03 18:24:01.487 12838 12838 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+02-03 18:24:01.503 12838 12838 D LifecycleMonitor: Lifecycle status change: com.example.lunchtray.MainActivity@5292c13 in: CREATED
+02-03 18:24:01.504 12838 12838 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.lunchtray.MainActivity@5292c13
+02-03 18:24:01.508 12838 12838 D LifecycleMonitor: Lifecycle status change: com.example.lunchtray.MainActivity@5292c13 in: STARTED
+02-03 18:24:01.509 12838 12838 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.example.lunchtray.MainActivity@5292c13
+02-03 18:24:01.510 12838 12838 D LifecycleMonitor: Lifecycle status change: com.example.lunchtray.MainActivity@5292c13 in: RESUMED
+02-03 18:24:01.510 12838 12838 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.example.lunchtray.MainActivity@5292c13
+02-03 18:24:01.516 12838 12838 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@69546d9 in: STOPPED
+02-03 18:24:01.516 12838 12838 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.example.lunchtray/.MainActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.lunchtray/androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity (has extras) }, activity=androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity@69546d9
+02-03 18:24:01.528   407   444 D goldfish-address-space: claimShared: Ask to claim region [0x3f2a4c000 0x3f33f0000]
+02-03 18:24:01.530   407   444 D goldfish-address-space: claimShared: Ask to claim region [0x3f33f0000 0x3f3d94000]
+02-03 18:24:01.531   407   444 D goldfish-address-space: claimShared: Ask to claim region [0x3f4269000 0x3f4c0d000]
+02-03 18:24:01.541  1712  1712 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+02-03 18:24:01.543 12838 12863 W Parcel  : Expecting binder but got null!
+02-03 18:24:01.544  1712  2398 E HwDetectorWithState: a: 3
+02-03 18:24:01.556   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ac350
+02-03 18:24:01.556   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ac410
+02-03 18:24:01.577   811   937 D SplashScreenView: Build android.window.SplashScreenView{49ac6ab V.E...... ......ID 0,0-0,0}
+02-03 18:24:01.577   811   937 D SplashScreenView: Icon: view: null drawable: null size: 0
+02-03 18:24:01.577   811   937 D SplashScreenView: Branding: view: android.view.View{1b0e108 G.ED..... ......I. 0,0-0,0 #10204db android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+02-03 18:24:01.585 12838 12838 D RootViewPicker: Root not ready - waiting: 10ms for one to appear.
+02-03 18:24:01.590   608   629 W ziparchive: Unable to open '/data/app/~~H1IKnu5F9-DLteYoFe1Z2w==/com.example.lunchtray-OHatuIwYB00o5dQvqdXLDA==/base.dm': No such file or directory
+02-03 18:24:01.591   608   629 I ActivityTaskManager: Displayed com.example.lunchtray/.MainActivity: +156ms
+02-03 18:24:01.596 12838 12838 D RootViewPicker: Root not ready - waiting: 25ms for one to appear.
+02-03 18:24:01.622 12838 12838 D RootViewPicker: Root not ready - waiting: 50ms for one to appear.
+02-03 18:24:01.636  1547  1547 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3220
+02-03 18:24:01.636  1547  1547 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 0, unlocked = true
+02-03 18:24:01.636  1547  1547 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1919 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.lunchtray fieldId=-1 fieldName=null extras=null}, false)
+02-03 18:24:01.637  1547  1547 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2114 repeatCheckTimes = 2, unlocked = true
+02-03 18:24:01.665   442   483 W TransactionTracing: Could not find layer id -1
+02-03 18:24:01.676 12838 12838 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131231208/com.example.lunchtray:id/start_order_btn>
+02-03 18:24:01.678  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1292.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51770481, downTime=51770481, deviceId=-1, source=0x1002, displayId=0, eventId=-891168874 }
+02-03 18:24:01.679 12838 12838 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+02-03 18:24:01.732   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ac350
+02-03 18:24:01.732   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ac350
+02-03 18:24:01.843  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1292.5, toolType[0]=TOOL_TYPE_FINGER, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51770646, downTime=51770481, deviceId=-1, source=0x1002, displayId=0, eventId=-980239053 }
+02-03 18:24:01.888   946  1229 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+02-03 18:24:01.888   946  1229 D BtGatt.ScanManager: uid 10105 isForeground true scanMode -1
+02-03 18:24:01.899   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ac410
+02-03 18:24:01.900   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ab5d0
+02-03 18:24:01.900   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ab5d0
+02-03 18:24:01.900   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ac410
+02-03 18:24:01.900   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ab5d0
+02-03 18:24:01.900   442   483 W TransactionTracing: Could not find layer handle 0x75dd172ac410
+02-03 18:24:02.004   442   483 W TransactionTracing: Could not find layer id -1
+02-03 18:24:02.004   442   483 W TransactionTracing: Could not find layer id -1
+02-03 18:24:02.004   442   483 W TransactionTracing: Could not find layer id -1
+02-03 18:24:02.004   442   483 W TransactionTracing: Could not find layer id -1
+02-03 18:24:02.223 12838 12838 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131230844/com.example.lunchtray:id/cauliflower>
+02-03 18:24:02.225  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=206.0, y[0]=355.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51771028, downTime=51771028, deviceId=-1, source=0x1002, displayId=0, eventId=-717020035 }
+02-03 18:24:02.234   811   972 D EGL_emulation: app_time_stats: avg=20.05ms min=0.97ms max=116.29ms count=26
+02-03 18:24:02.267  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=206.0, y[0]=355.5, toolType[0]=TOOL_TYPE_FINGER, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51771070, downTime=51771028, deviceId=-1, source=0x1002, displayId=0, eventId=-245590390 }
+02-03 18:24:02.539 12838 12838 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131231081/com.example.lunchtray:id/next_button>
+02-03 18:24:02.541  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=798.5, y[0]=1788.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51771344, downTime=51771344, deviceId=-1, source=0x1002, displayId=0, eventId=-191329178 }
+02-03 18:24:02.572 12838 12863 D EGL_emulation: app_time_stats: avg=14.97ms min=1.21ms max=250.03ms count=27
+02-03 18:24:02.582  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=798.5, y[0]=1788.5, toolType[0]=TOOL_TYPE_FINGER, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51771385, downTime=51771344, deviceId=-1, source=0x1002, displayId=0, eventId=-371391059 }
+02-03 18:24:02.907 12838 12838 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131231138/com.example.lunchtray:id/salad>
+02-03 18:24:02.908  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=239.5, y[0]=355.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51771711, downTime=51771711, deviceId=-1, source=0x1002, displayId=0, eventId=-815345505 }
+02-03 18:24:02.947  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=239.5, y[0]=355.5, toolType[0]=TOOL_TYPE_FINGER, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51771751, downTime=51771711, deviceId=-1, source=0x1002, displayId=0, eventId=-94599215 }
+02-03 18:24:03.238 12838 12838 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131231081/com.example.lunchtray:id/next_button>
+02-03 18:24:03.240  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=798.5, y[0]=1742.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51772043, downTime=51772043, deviceId=-1, source=0x1002, displayId=0, eventId=-513529616 }
+02-03 18:24:03.280  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=798.5, y[0]=1742.5, toolType[0]=TOOL_TYPE_FINGER, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51772083, downTime=51772043, deviceId=-1, source=0x1002, displayId=0, eventId=-738246919 }
+02-03 18:24:03.348   442   483 W TransactionTracing: Could not find layer id -1
+02-03 18:24:03.744 12838 12838 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131230835/com.example.lunchtray:id/bread>
+02-03 18:24:03.747  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=196.0, y[0]=355.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51772548, downTime=51772548, deviceId=-1, source=0x1002, displayId=0, eventId=-856551264 }
+02-03 18:24:03.785  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=196.0, y[0]=355.5, toolType[0]=TOOL_TYPE_FINGER, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51772588, downTime=51772548, deviceId=-1, source=0x1002, displayId=0, eventId=-793300074 }
+02-03 18:24:03.804 12838 12863 D EGL_emulation: app_time_stats: avg=16.53ms min=1.60ms max=248.31ms count=30
+02-03 18:24:04.088 12838 12838 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131231081/com.example.lunchtray:id/next_button>
+02-03 18:24:04.090  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=798.5, y[0]=1411.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51772893, downTime=51772893, deviceId=-1, source=0x1002, displayId=0, eventId=-772080586 }
+02-03 18:24:04.132  1184  1184 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=798.5, y[0]=1411.5, toolType[0]=TOOL_TYPE_FINGER, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=51772935, downTime=51772893, deviceId=-1, source=0x1002, displayId=0, eventId=-434448920 }
+02-03 18:24:04.555 12838 12838 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Subtotal: $10.00"}' assertion on view view.getId() is <2131231217/com.example.lunchtray:id/subtotal>
+02-03 18:24:04.556 12838 12838 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Tax: $0.80"}' assertion on view view.getId() is <2131231233/com.example.lunchtray:id/tax>
+02-03 18:24:04.557 12838 12838 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Total: $10.80"}' assertion on view view.getId() is <2131231262/com.example.lunchtray:id/total>
+02-03 18:24:04.557 12838 12861 I TestRunner: finished: subtotal_tax_total_in_checkout(com.example.lunchtray.OrderFunctionalityTests)

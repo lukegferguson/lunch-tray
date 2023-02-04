@@ -21,6 +21,8 @@ import com.example.lunchtray.model.MenuItem
 /**
  * Map of available menu items to be displayed in the menu fragments.
  */
+//Map keys are the item, value is a MenuItem object, which has several properties.
+//That's how it can be a map and still hold several pieces of information on each value
 object DataSource {
     val menuItems = mapOf(
         "cauliflower" to
